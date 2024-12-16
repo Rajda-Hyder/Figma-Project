@@ -1,7 +1,7 @@
 import Image from "next/image";
-import pic from "../../../../public/assets/Rectangle 13.png";
-import pic1 from "../../../../public/assets/Rectangle 14.png";
-import pic2 from "../../../../public/assets/Rectangle 15.png";
+import pic from "../../../../public/assets/Rectangle-13.png";
+import pic1 from "../../../../public/assets/Rectangle-14.png";
+import pic2 from "../../../../public/assets/Rectangle-15.png";
 import time from "../../../../public/assets/timedate.png";
 import Link from "next/link";
 

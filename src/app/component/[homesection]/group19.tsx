@@ -1,8 +1,8 @@
 import Image from "next/image";
-import group from "../../../../public/assets/Group 15.png";
-import group1 from "../../../../public/assets/Group 16.png";
-import group2 from "../../../../public/assets/Group 17.png";
-import group3 from "../../../../public/assets/Group 18.png";
+import group from "../../../../public/assets/Group-15.png";
+import group1 from "../../../../public/assets/Group-16.png";
+import group2 from "../../../../public/assets/Group-17.png";
+import group3 from "../../../../public/assets/Group-18.png";
 import Link from "next/link";
 
 export default function Group19() {

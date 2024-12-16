@@ -1,6 +1,6 @@
 import Image from "next/image";
-import sofa from "../../../../public/assets/Asgaard sofa.png";
-import button from "../../../../public/assets/Asgaard button.png";
+import sofa from "../../../../public/assets/Asgaard-sofa.png";
+import button from "../../../../public/assets/Asgaard-button.png";
 import Link from "next/link";
 
 export default function Asgaard() {

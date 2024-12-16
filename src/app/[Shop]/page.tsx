@@ -3,7 +3,7 @@ import Link from "next/link";
 import shop from "../../../public/assets/shopimages/shop1pic.png";
 import logo from "../../../public/assets/shopimages/shoplogo.png";
 import small from "../../../public/assets/shopimages/shopSlogo.png";
-import panel from "../../../public/assets/shopimages/Group 63.png";
+import panel from "../../../public/assets/shopimages/Group63.png";
 import Catlog from "../shopcatlog/page";
 import Foot from "../foot/page";
 
@@ -34,7 +34,7 @@ export default function Shop() {
       {/* Shop Items */}
       <div className="items-center ml-20">
         <Catlog />
-              </div>
+      </div>
 
       {/* Pagination */}
       <div className="flex flex-row justify-center py-28 gap-[38px]">
@@ -67,8 +67,8 @@ export default function Shop() {
         </Link>
       </div>
 
-     {/* Foot */}
-    <Foot /> 
+      {/* Foot */}
+      <Foot />
     </div>
   );
 }

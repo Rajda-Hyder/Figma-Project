@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import cart from "../../../public/assets/cart/ant-design_shopping-cart-outlined.png"; // Replace with your cart image path
+import cart from "../../../public/assets/cart/ant-design.png"; // Replace with your cart image path
 import lock from "../../../public/assets/cart/lock.png";
 import cross from "../../../public/assets/cart/cross.png";
 import Link from "next/link";

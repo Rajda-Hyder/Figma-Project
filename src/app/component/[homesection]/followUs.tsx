@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "../../../../public/assets/Rectangle 17.png";
+import image from "../../../../public/assets/Rectangle-17.png";
 import image1 from "../../../../public/assets/button.png";
 import Link from "next/link";
 

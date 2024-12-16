@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import shop from "../../../public/assets/shopimages/shop1pic.png";

@@ -8,15 +8,15 @@ import Footer from "./component/footer";
 // Load the Poppins font
 const poppins = Poppins({
   subsets: ['latin'], // Specify the subset you want (e.g., 'latin', 'latin-ext', etc.)
-  weight: ['400', '600', '700','800','900'], // Choose font weights
+  weight: ['400', '600', '700', '800', '900'], // Choose font weights
   style: ['normal'], // Optional: Add styles (normal, italic)
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight:['400','600','700','800'],
+  weight: ['400', '600', '700', '800'],
   style: ['normal'],
- });
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,11 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <body className={`${inter.className}`}>
-        <Header/>
+        <Header />
 
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

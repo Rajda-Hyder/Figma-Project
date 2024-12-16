@@ -1,6 +1,6 @@
 import Image from "next/image";
-import rocket from "../../../../public/assets/Rocket single seater 1.png";
-import table from "../../../../public/assets/side table 1.png";
+import rocket from "../../../../public/assets/Rocket.png";
+import table from "../../../../public/assets/side.png";
 import sofa from "../../../../public/assets/sofa.png";
 import Link from "next/link";
 

@@ -7,7 +7,7 @@ import shop from "../../../public/assets/shopimages/shop1pic.png";
 import logo from "../../../public/assets/checkout/checkoutlogo.png";
 import small from "../../../public/assets/shopimages/shopSlogo.png";
 import line from "../../../public/assets/checkout/ckoutline.png";
-import dot from "../../../public/assets/checkout/Ellipse 1.png";
+import dot from "../../../public/assets/checkout/Ellipse1.png";
 import Foot from "../foot/page";
 
 

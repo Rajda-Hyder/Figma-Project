@@ -3,7 +3,7 @@ import Link from "next/link";
 import shop from "../../../public/assets/shopimages/shop1pic.png";
 import logo from "../../../public/assets/contact/contactlogo.png";
 import small from "../../../public/assets/shopimages/shopSlogo.png";
-import panel from "../../../public/assets/shopimages/Group 63.png";
+import panel from "../../../public/assets/shopimages/Group63.png";
 import address from "../../../public/assets/contact/address.png";
 import phone from "../../../public/assets/contact/phone.png";
 import clock from "../../../public/assets/contact/clock.png";

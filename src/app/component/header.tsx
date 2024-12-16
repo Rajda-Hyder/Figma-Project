@@ -22,18 +22,18 @@ export default function Header() {
       >
         {/* Navigation Links */}
         <ul className="flex items-center justify-center -ml-20 font-poppins font-medium text-[16px] pt-8 absolute w-[430px] h-[24px] top-[38px] left-[505px] gap-[48px]">
-          <Link href="/">
-            <li >Home</li>
-          </Link>
-          <Link href="/Shop">
-            <li >Shop</li>
-          </Link>
-          <Link href="/blog">
-            <li >About</li>
-          </Link>
-          <Link href="/contact">
-            <li >Contact</li>
-          </Link>
+        <li > <Link href="/">
+            Home
+          </Link></li>
+          
+            <li ><Link href="/Shop">Shop</Link></li>
+          
+          
+            <li><Link href="/blog">About</Link></li>
+          
+          
+            <li ><Link href="/contact">Contact</Link></li>
+        
         </ul>
 
         {/* Icons */}

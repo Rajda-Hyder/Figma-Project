@@ -2,9 +2,9 @@
 import { useState } from "react";
 
 export default function CounterButton() {
-  const [count, setCount] = useState(1); // Initial count starts at 1
+  const [count,setCount] = useState(1); // Initial count starts at 1
   const baseAmount = 250000; // Base amount
-  const [amount, setAmount] = useState(baseAmount); // Initial amount
+  const [amount,setAmount] = useState(baseAmount); // Initial amount
 
   const handleButtonClick = () => {
     const newCount = count + 1; // Increment count

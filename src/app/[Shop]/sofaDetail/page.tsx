@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import sofa1 from "../../../../public/assets/detail/detail2.png";
 import sofa3 from "../../../../public/assets/detail/detail4.png";
-import group from "../../../../public/assets/Group 15.png";
-import group1 from "../../../../public/assets/Group 16.png";
-import group2 from "../../../../public/assets/Group 17.png";
-import group3 from "../../../../public/assets/Group 18.png";
+import group from "../../../../public/assets/Group-15.png";
+import group1 from "../../../../public/assets/Group-16.png";
+import group2 from "../../../../public/assets/Group-17.png";
+import group3 from "../../../../public/assets/Group-18.png";
 import svg from "../../../../public/assets/icons/star-half-icon.png";
 import fb from "../../../../public/assets/icons/fb.png";
 import link from "../../../../public/assets/icons/link.png";
@@ -15,7 +15,7 @@ import plus from "../../../../public/assets/icons/-1+.png";
 import add from "../../../../public/assets/icons/add.png";
 import arrow from "../../../../public/assets/icons/arrow.png";
 import arrow1 from "../../../../public/assets/icons/arrow.png";
-import line from "../../../../public/assets/icons/Line 5.png";
+import line from "../../../../public/assets/icons/Line5.png";
 
 export default function SofaDetail() {
   return (
@@ -172,7 +172,7 @@ export default function SofaDetail() {
             </ul>
           </div>
         </div>
-      
+
       </div>
       <div className="justify-center">
         <Image src={sofa3} alt="sofa3" />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import letter from "../../../public/assets/Newsletter.png";
-import uni from "../../../public/assets/400 University.png";
+import uni from "../../../public/assets/University.png";
 import Link from "next/link";
 
 export default function Footer() {
