@@ -2,7 +2,7 @@ export default function Foot() {
   return (
     <div>
       {/* Footer */}
-      <section className="text-gray-600 font-poppins bg-[#FAF4F4]">
+      <section className="text-gray-600 font-poppins bg-[#FAF4F4] mt-10">
         <div className="container px-5 py-12 mx-auto">
           <div className="flex flex-col md:flex-row items-start justify-center gap-8">
             {/* Free Delivery */}

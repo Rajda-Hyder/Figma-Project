@@ -27,7 +27,7 @@ export default function Group54() {
             <h2 className="font-normal text-[16px] sm:text-[18px] md:text-[20px] leading-tight">
               Going all-in with millennial design
             </h2>
-            <Link href="#" aria-label="Read more about Blog Post 1">
+            <Link href="/blog" aria-label="Read more about Blog Post 1">
               <span className="font-semibold text-[16px] sm:text-[18px] md:text-[20px] underline underline-offset-8 hover:opacity-75 block mt-4">
                 Read More
               </span>
@@ -45,7 +45,7 @@ export default function Group54() {
             <h2 className="font-normal text-[16px] sm:text-[18px] md:text-[20px] leading-tight">
               Going all-in with millennial design
             </h2>
-            <Link href="#" aria-label="Read more about Blog Post 2">
+            <Link href="/blog" aria-label="Read more about Blog Post 2">
               <span className="font-semibold text-[16px] sm:text-[18px] md:text-[20px] underline underline-offset-8 hover:opacity-75 block mt-4">
                 Read More
               </span>
@@ -63,7 +63,7 @@ export default function Group54() {
             <h2 className="font-normal text-[16px] sm:text-[18px] md:text-[20px] leading-tight">
               Going all-in with millennial design
             </h2>
-            <Link href="#" aria-label="Read more about Blog Post 3">
+            <Link href="/blog" aria-label="Read more about Blog Post 3">
               <span className="font-semibold text-[16px] sm:text-[18px] md:text-[20px] underline underline-offset-8 hover:opacity-75 block mt-4">
                 Read More
               </span>
@@ -77,7 +77,7 @@ export default function Group54() {
 
       {/* View All Posts Button */}
       <div className="flex justify-center mt-10">
-        <Link href="#" aria-label="View all blog posts">
+        <Link href="/blog" aria-label="View all blog posts">
           <button className="font-poppins font-semibold text-[16px] sm:text-[18px] md:text-[20px] underline underline-offset-8 hover:opacity-75 focus:outline-none">
             View All Posts
           </button>

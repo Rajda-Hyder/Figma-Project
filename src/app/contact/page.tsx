@@ -3,7 +3,6 @@ import Link from "next/link";
 import shop from "../../../public/assets/shopimages/shop1pic.png";
 import logo from "../../../public/assets/contact/contactlogo.png";
 import small from "../../../public/assets/shopimages/shopSlogo.png";
-import panel from "../../../public/assets/shopimages/Group63.png";
 import address from "../../../public/assets/contact/address.png";
 import phone from "../../../public/assets/contact/phone.png";
 import clock from "../../../public/assets/contact/clock.png";
@@ -17,7 +16,7 @@ export default function Contact () {
         <Image src={shop} alt="shop" className="h-[316px] w-full" />
         <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <li>
-            <Image src={logo} alt="logo" className="-mt-20" />
+            <Image src={logo} alt="logo"/>
           </li>
           <li className="flex font-poppins pb-20 ml-10">
             <Link href="/">
@@ -29,7 +28,6 @@ export default function Contact () {
             </Link>
           </li>
         </ul>
-        <Image src={panel} alt="panel" className="w-full h-[100px] my-10" />
       </div>
       <div className="font-poppins">
         <h1 className="font-semibold text-[36px] leading-[54px] text-center mt-6">Get In Touch With Us</h1>

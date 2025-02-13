@@ -1,16 +1,63 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import shop from "../../../public/assets/shopimages/shop1pic.png";
 import logo from "../../../public/assets/cart/cartlogo.png";
 import small from "../../../public/assets/shopimages/shopSlogo.png";
-import sofa from "../../../public/assets/cart/cartSofa.png";
 import del from "../../../public/assets/cart/ant-design_delete-filled.png";
-import CounterButton from "../button/page";
 import Foot from "../foot/page";
+import { useCart } from "../contexts/cartContext";
 
-export default function Cart() {
+// Product Interface
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  imagePath: string;
+}
 
+export default function CartPage() {
+  const { state, dispatch } = useCart();
+  const { cart } = state;
+
+  const handleRemove = (id: string) => {
+    dispatch({ type: "REMOVE_FROM_CART", payload: id });
+  };
+
+  const handleQuantityChange = (id: string, quantity: number) => {
+    dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } });
+  };
+
+  // Calculate Subtotal
+  const calculateSubtotal = (price: number, quantity: number) => {
+    return price * quantity;
+  };
+
+  const totalPrice = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
+  if (cart.length === 0) {
+    return <p>Your cart is empty!</p>;
+  }
+
+  if (cart.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <h1 className="text-2xl font-bold mb-4">Your cart is empty!</h1>
+        <Link href="/Shop">
+          <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+            Continue Shopping
+          </button>
+        </Link>
+      </div>
+    );
+  }
+
+  
   return (
     <div className="w-full">
       {/* Shop Header */}
@@ -35,6 +82,7 @@ export default function Cart() {
       {/* Cart Body */}
       <div className="flex flex-col lg:flex-row gap-10 mt-10 mx-4 lg:mx-16">
         {/* Cart Items */}
+
         <div className="flex flex-col w-full lg:w-3/4">
           {/* Header Row */}
           <ul className="flex bg-[#FFF9E5] py-4 px-6 font-poppins font-medium text-[16px] leading-[24px] justify-between text-center">
@@ -44,20 +92,47 @@ export default function Cart() {
             <li>Subtotal</li>
           </ul>
 
-          {/* Cart Item Row */}
-          <ul className="flex flex-wrap items-center justify-between text-[#9F9F9F] px-6 py-4">
-            <li>
-              <Image src={sofa} alt="sofa" className="bg-[#FBEBB5] w-[80px] h-[80px] object-cover" />
-            </li>
-            <li className="mt-4 lg:mt-0 text-center lg:text-left">Asgaard sofa</li>
-            <li className="mt-4 lg:mt-0">Rs. 250,000.00</li>
-            <li className="mt-4 lg:mt-0">
-              <CounterButton />
-            </li>
-            <li className="mt-4 lg:mt-0">
-              <Image src={del} alt="delete" className="cursor-pointer" />
-            </li>
-          </ul>
+          {/* Cart Items */}
+          {cart.map((item:Product) => (
+            <ul
+              key={item.id}
+              className="flex flex-wrap items-center justify-between text-[#9F9F9F] px-6 py-4"
+            >
+              <li>
+                <Image
+                  src={item.imagePath}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className="bg-[#FBEBB5] w-[80px] h-[80px] object-cover"
+                />
+              </li>
+              <li className="mt-4 lg:mt-0 text-center lg:text-left">{item.name}</li>
+              <li className="mt-4 lg:mt-0">$ {item.price}</li>
+              <li className="mt-4 lg:mt-0">
+                <input
+                  type="number"
+                  value={item.quantity}
+                  min={1}
+                  onChange={(e) =>
+                    handleQuantityChange(item.id, parseInt(e.target.value))
+                  }
+                  className="w-16 text-center"
+                />
+              </li>
+              <li className="mt-4 lg:mt-0">
+                $ {calculateSubtotal(item.price, item.quantity)}
+              </li>
+              <li className="mt-4 lg:mt-0">
+                <Image
+                  src={del}
+                  alt="delete"
+                  className="cursor-pointer"
+                  onClick={() => handleRemove(item.id)}
+                />
+              </li>
+            </ul>
+          ))}
         </div>
 
         {/* Cart Totals */}
@@ -65,24 +140,22 @@ export default function Cart() {
           <h1 className="font-semibold text-[32px] leading-[48px] mb-6">Cart Totals</h1>
           <ul className="flex flex-col text-[16px] font-medium gap-4">
             <li className="flex justify-between">
-              <span>Subtotal</span>
-              <span>Rs. 250,000.00</span>
-            </li>
-            <li className="flex justify-between">
               <span>Total</span>
               <span className="text-[#B88E2F] font-semibold text-[20px] leading-[30px]">
-                Rs. 250,000.00
+                $ {totalPrice}
               </span>
             </li>
           </ul>
-        <Link href= "/checkout">  <button className="mt-8 border border-black px-6 py-3 rounded-xl font-normal text-[20px] hover:bg-gray-200 transition">
-            Check Out
-          </button></Link>
+          <Link href="/checkout">
+            <button className="mt-8 border border-black px-6 py-3 rounded-xl font-normal text-[20px] hover:bg-gray-200 transition">
+              Check Out
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* Footer */}
-     <Foot />
-         </div>
+      <Foot />
+    </div>
   );
 }

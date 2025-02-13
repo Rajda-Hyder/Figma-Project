@@ -22,12 +22,10 @@ export default function Header() {
       >
         {/* Navigation Links */}
         <ul
-          className={`flex items-center justify-center font-poppins font-medium text-[16px] ${
-            isHomePage ? "absolute top-[38px] left-[50%] translate-x-[-50%]" : ""
-          } md:-ml-20 md:w-[430px] md:h-[24px] md:gap-[48px] ${
-            isHomePage ? "hidden md:flex" : "flex flex-col gap-4 md:flex-row"
-          }`}
-        >
+  className="flex items-center justify-center font-poppins font-medium text-[16px] 
+             absolute top-[38px] left-[50%] translate-x-[-50%] 
+             md:-ml-20 md:w-[430px] md:h-[24px] md:gap-[48px] md:flex"
+>
           <li>
             <Link href="/">Home</Link>
           </li>

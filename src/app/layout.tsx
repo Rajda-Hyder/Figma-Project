@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Poppins } from '@next/font/google';
+import { Poppins } from 'next/font/google';
 import Header from "./component/header";
 import Footer from "./component/footer";
+import CartProviderWrapper from "./component/cartprovider";
 
 // Load the Poppins font
 const poppins = Poppins({
@@ -29,11 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body className={`${inter.className}`}>
+    <html lang="en">
+      <body className={`${poppins.className}`}>
+      <CartProviderWrapper>
         <Header />
-       <main> {children}</main>
+        {children} 
         <Footer />
+        </CartProviderWrapper>
       </body>
     </html>
   );
