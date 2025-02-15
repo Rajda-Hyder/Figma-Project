@@ -57,7 +57,7 @@ export default function Group19() {
       {/* View More Button */}
       <div className="flex justify-center mt-10">
         <button className="font-poppins font-semibold text-[14px] sm:text-[16px] md:text-[18px] underline underline-offset-8 hover:opacity-80 focus:outline-none">
-        <Link href= "/shop">  View More  </Link>
+        <Link href= "/Shop">  View More  </Link>
         </button>
       </div>
     </div>
